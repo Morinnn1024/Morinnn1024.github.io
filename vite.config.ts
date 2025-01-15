@@ -17,5 +17,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  base: "Morinnn1024.github.io",
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/Morinnn1024.github.io" // production
+      : "/", // development
 })
