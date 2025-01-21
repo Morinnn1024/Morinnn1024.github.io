@@ -1,10 +1,11 @@
+<!-- Header.vue: 顶栏 -->
 <script setup lang="ts">
 
 </script>
 
 <template>
-  <div>
-    <h1>登录页面</h1>
+  <div class="header" height="20" width="100%">
+    页眉
   </div>
 </template>
 

@@ -1,10 +1,11 @@
+<!-- Footer.vue: 页脚 -->
 <script setup lang="ts">
 
 </script>
 
 <template>
   <div>
-    <h1>注册页面</h1>
+    页脚
   </div>
 </template>
 
