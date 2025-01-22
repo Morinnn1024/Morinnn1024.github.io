@@ -1,6 +1,27 @@
 <!-- Sidebar.vue: 侧边栏 -->
 <script setup lang="ts">
+// 构建目录树
+// 运行 ./posts/generateTree.js 生成 treeData.json
+// 读取 treeData.json 内容
+import treeData from './posts/treeData.json';
+import { Document } from '@element-plus/icons-vue';
 
+interface TreeNode {
+  label: string,
+  children?: TreeNode[]
+}
+
+const fileTree: TreeNode[] = [treeData];
+const fileIndex = fileTree[0].children;
+
+const defaultProps = {
+  children: 'children',
+  label: 'label',
+}
+
+const handleNodeClick = (node: TreeNode) => {
+  console.log(node)
+}
 </script>
 
 <template>
@@ -8,7 +29,19 @@
     <div class="sidebar-header">
       侧边栏
     </div>
-    <p v-for="item in 20" :key="item" class="scrollbar-demo-item">{{ item }}</p>
+    <el-tree
+      style="max-width: 250px"
+      :data="fileIndex"
+      :props="defaultProps"
+      @node-click="handleNodeClick"
+    >
+      <template #default="{ node }">
+        <el-icon v-if="node.label.substr(-3) === '.md'" class="node-icon"><Document /></el-icon>
+        <span>
+          {{ node.label.split('.')[0] }}
+        </span>
+      </template>
+    </el-tree>
   </el-scrollbar>
 </template>
 
@@ -22,18 +55,12 @@
   flex-direction: column;
   background-color: #fff;
 }
+
 .el-scrollbar {
   padding-right: 10px;
 }
-.scrollbar-demo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  margin: 10px;
-  text-align: center;
-  border-radius: 4px;
-  background: var(--el-color-primary-light-9);
-  color: var(--el-color-primary);
+
+.node-icon {
+  margin-right: 7px;
 }
 </style>

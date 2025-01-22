@@ -1,0 +1,105 @@
+{
+  "label": "posts",
+  "children": [
+    {
+      "label": "Hexo",
+      "children": [
+        {
+          "label": "readme.md"
+        }
+      ]
+    },
+    {
+      "label": "Vue3_GitHubPages",
+      "children": [
+        {
+          "label": "00-环境配置.md"
+        },
+        {
+          "label": "01-部署GithubPages.md"
+        },
+        {
+          "label": "渲染Markdown.md"
+        }
+      ]
+    },
+    {
+      "label": "软件工程(2022级)",
+      "children": [
+        {
+          "label": "00-写在前面.md"
+        },
+        {
+          "label": "HarmonyOS速通手册",
+          "children": [
+            {
+              "label": "00-环境配置.md"
+            },
+            {
+              "label": "01-项目结构.md"
+            }
+          ]
+        },
+        {
+          "label": "Web开发速通手册",
+          "children": [
+            {
+              "label": "MySQL",
+              "children": [
+                {
+                  "label": "00-环境配置.md"
+                },
+                {
+                  "label": "01-基础语句.md"
+                }
+              ]
+            },
+            {
+              "label": "SpringBoot",
+              "children": [
+                {
+                  "label": "00-环境配置.md"
+                },
+                {
+                  "label": "01-项目结构.md"
+                },
+                {
+                  "label": "02-编写基础业务功能.md"
+                },
+                {
+                  "label": "服务端开发-学习总结.md"
+                }
+              ]
+            },
+            {
+              "label": "Vue3_ElementPlus",
+              "children": [
+                {
+                  "label": "00-环境配置.md"
+                },
+                {
+                  "label": "01-项目结构.md"
+                },
+                {
+                  "label": "02-页面构成.md"
+                },
+                {
+                  "label": "03-变量与函数.md"
+                },
+                {
+                  "label": "04-API接口.md"
+                },
+                {
+                  "label": "05-Style优化.md"
+                },
+                {
+                  "label": "06-父组件与子组件.md"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
