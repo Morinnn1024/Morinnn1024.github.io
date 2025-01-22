@@ -7,7 +7,9 @@ import treeData from './posts/treeData.json';
 import { Document } from '@element-plus/icons-vue';
 
 interface TreeNode {
+  id: number,
   label: string,
+  path: string,
   children?: TreeNode[]
 }
 
@@ -15,6 +17,8 @@ const fileTree: TreeNode[] = [treeData];
 const fileIndex = fileTree[0].children;
 
 const defaultProps = {
+  id: 'id',
+  path: 'path',
   children: 'children',
   label: 'label',
 }
