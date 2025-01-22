@@ -52,9 +52,10 @@ const handleNodeClick = (node: TreeNode) => {
 
     <div class="sidebar-list">
       <el-tree
-        style="width: 240px"
+        style="width: 260px;"
         :data="fileIndex"
         :props="defaultProps"
+        :indent="8"
         @node-click="handleNodeClick"
       >
         <template #default="{ node }">
@@ -119,11 +120,6 @@ const handleNodeClick = (node: TreeNode) => {
   
   box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
   border: 1px rgba(255,255,255,0.4) solid;
-}
-
-.el-scrollbar {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .el-link {
