@@ -55,16 +55,17 @@ import Post from './views/Post.vue'
 }
 
 .header {
-  background-color: var(--el-color-primary);
+  height: 39px;
+  background-color: white;
   color: #fff;
   padding: 10px;
-  font-size: 25px;
+  font-size: 15px;
 
-  display: flex;
-  flex-direction: column;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
 
-  min-width: 950px;
-  box-shadow: 0 5px 4px rgba(105, 105, 105, 0.1);
+  border-bottom: 1px solid #ccc; /* 添加下边框 */
 }
 
 .light-mode {

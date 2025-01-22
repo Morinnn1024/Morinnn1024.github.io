@@ -22,6 +22,9 @@
   flex-direction: column;
   background-color: #fff;
 }
+.el-scrollbar {
+  padding-right: 10px;
+}
 .scrollbar-demo-item {
   display: flex;
   align-items: center;
