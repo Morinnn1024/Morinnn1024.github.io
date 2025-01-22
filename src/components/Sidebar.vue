@@ -65,6 +65,11 @@ const handleNodeClick = (node: TreeNode) => {
         </template>
       </el-tree>
     </div>
+    <div class="sidebar-list" style="height: 60px">
+      <div>
+        <el-text style="margin: 3px; margin-left: 14px;">广告位招租~ (∠・ω< )⌒☆</el-text>
+      </div>
+    </div>
   </el-scrollbar>
   </div>
 </template>
@@ -73,8 +78,9 @@ const handleNodeClick = (node: TreeNode) => {
 .background {
   height: 100%;
   background-color: #f0f0f0;
-  /* background-image: url('path/to/your/image.jpg'); 
-  background-size: cover; */
+  background-image: url('../assets/bg-sidebar-winter.jpg'); 
+  background-size: cover;
+  background-position: center;
 }
 
 .sidebar-header {
@@ -82,8 +88,13 @@ const handleNodeClick = (node: TreeNode) => {
   margin: 10px;
   margin-top: 20px;
   display: flex;
-  background-color: #fff;
-  border-radius: 20px;
+
+  backdrop-filter: blur(8px);
+  background-color: rgba(255,255,255, 0.6);
+  border-radius: 15px;
+  
+  box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
+  border: 1px rgba(255,255,255,0.4) solid;
 }
 
 .header-text {
@@ -102,8 +113,12 @@ const handleNodeClick = (node: TreeNode) => {
   
   justify-content: center;
 
-  background-color: #fff;
-  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255,255,255, 0.6);
+  border-radius: 15px;
+  
+  box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
+  border: 1px rgba(255,255,255,0.4) solid;
 }
 
 .el-scrollbar {
