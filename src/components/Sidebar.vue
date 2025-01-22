@@ -29,6 +29,7 @@ const handleNodeClick = (node: TreeNode) => {
 </script>
 
 <template>
+  <div class="background">
   <el-scrollbar>
     <div class="sidebar-header">
       <div class="header-icon">
@@ -48,23 +49,34 @@ const handleNodeClick = (node: TreeNode) => {
       <el-link>首页</el-link>
       <el-link>食用指南</el-link>
     </div>
-    <el-tree
-      style="max-width: 270px"
-      :data="fileIndex"
-      :props="defaultProps"
-      @node-click="handleNodeClick"
-    >
-      <template #default="{ node }">
-        <el-icon v-if="node.label.substr(-3) === '.md'" class="node-icon"><Document /></el-icon>
-        <span>
-          {{ node.label.split('.')[0] }}
-        </span>
-      </template>
-    </el-tree>
+
+    <div class="sidebar-list">
+      <el-tree
+        style="width: 240px"
+        :data="fileIndex"
+        :props="defaultProps"
+        @node-click="handleNodeClick"
+      >
+        <template #default="{ node }">
+          <el-icon v-if="node.label.substr(-3) === '.md'" class="node-icon"><Document /></el-icon>
+          <span>
+            {{ node.label.split('.')[0] }}
+          </span>
+        </template>
+      </el-tree>
+    </div>
   </el-scrollbar>
+  </div>
 </template>
 
 <style scoped>
+.background {
+  height: 100%;
+  background-color: #f0f0f0;
+  /* background-image: url('path/to/your/image.jpg'); 
+  background-size: cover; */
+}
+
 .sidebar-header {
   padding: 10px;
   margin: 10px;
