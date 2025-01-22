@@ -39,117 +39,155 @@
     },
     {
       "id": 7,
+      "label": "软件工程(2022级)",
+      "path": "软件工程(2022级)",
+      "children": [
+        {
+          "id": 8,
+          "label": "HarmonyOS速通手册",
+          "path": "软件工程(2022级)/HarmonyOS速通手册",
+          "children": []
+        },
+        {
+          "id": 9,
+          "label": "Web开发速通手册",
+          "path": "软件工程(2022级)/Web开发速通手册",
+          "children": [
+            {
+              "id": 10,
+              "label": "MySQL",
+              "path": "软件工程(2022级)/Web开发速通手册/MySQL",
+              "children": []
+            },
+            {
+              "id": 11,
+              "label": "SpringBoot",
+              "path": "软件工程(2022级)/Web开发速通手册/SpringBoot",
+              "children": []
+            },
+            {
+              "id": 12,
+              "label": "Vue3_ElementPlus",
+              "path": "软件工程(2022级)/Web开发速通手册/Vue3_ElementPlus",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
       "label": "软件工程_2022",
       "path": "软件工程_2022",
       "children": [
         {
-          "id": 8,
+          "id": 14,
           "label": "00-写在前面.md",
           "path": "软件工程_2022/00-写在前面.md"
         },
         {
-          "id": 9,
+          "id": 15,
           "label": "HarmonyOS速通手册",
           "path": "软件工程_2022/HarmonyOS速通手册",
           "children": [
             {
-              "id": 10,
+              "id": 16,
               "label": "00-环境配置.md",
               "path": "软件工程_2022/HarmonyOS速通手册/00-环境配置.md"
             },
             {
-              "id": 11,
+              "id": 17,
               "label": "01-项目结构.md",
               "path": "软件工程_2022/HarmonyOS速通手册/01-项目结构.md"
             }
           ]
         },
         {
-          "id": 12,
+          "id": 18,
           "label": "Web开发速通手册",
           "path": "软件工程_2022/Web开发速通手册",
           "children": [
             {
-              "id": 13,
+              "id": 19,
               "label": "MySQL",
               "path": "软件工程_2022/Web开发速通手册/MySQL",
               "children": [
                 {
-                  "id": 14,
+                  "id": 20,
                   "label": "00-环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/MySQL/00-环境配置.md"
                 },
                 {
-                  "id": 15,
+                  "id": 21,
                   "label": "01-基础语句.md",
                   "path": "软件工程_2022/Web开发速通手册/MySQL/01-基础语句.md"
                 }
               ]
             },
             {
-              "id": 16,
+              "id": 22,
               "label": "SpringBoot",
               "path": "软件工程_2022/Web开发速通手册/SpringBoot",
               "children": [
                 {
-                  "id": 17,
+                  "id": 23,
                   "label": "00-环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/00-环境配置.md"
                 },
                 {
-                  "id": 18,
+                  "id": 24,
                   "label": "01-项目结构.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/01-项目结构.md"
                 },
                 {
-                  "id": 19,
+                  "id": 25,
                   "label": "02-编写基础业务功能.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/02-编写基础业务功能.md"
                 },
                 {
-                  "id": 20,
+                  "id": 26,
                   "label": "服务端开发-学习总结.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/服务端开发-学习总结.md"
                 }
               ]
             },
             {
-              "id": 21,
+              "id": 27,
               "label": "Vue3_ElementPlus",
               "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus",
               "children": [
                 {
-                  "id": 22,
+                  "id": 28,
                   "label": "00-环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/00-环境配置.md"
                 },
                 {
-                  "id": 23,
+                  "id": 29,
                   "label": "01-项目结构.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/01-项目结构.md"
                 },
                 {
-                  "id": 24,
+                  "id": 30,
                   "label": "02-页面构成.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md"
                 },
                 {
-                  "id": 25,
+                  "id": 31,
                   "label": "03-变量与函数.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/03-变量与函数.md"
                 },
                 {
-                  "id": 26,
+                  "id": 32,
                   "label": "04-API接口.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/04-API接口.md"
                 },
                 {
-                  "id": 27,
+                  "id": 33,
                   "label": "05-Style优化.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/05-Style优化.md"
                 },
                 {
-                  "id": 28,
+                  "id": 34,
                   "label": "06-父组件与子组件.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/06-父组件与子组件.md"
                 }
