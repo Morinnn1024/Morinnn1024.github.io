@@ -1,13 +1,9 @@
----
-title: 渲染 Markdown 文件
----
-
-## 在 Vue3 中渲染 Markdown 文件
+# 在 Vue3 中渲染 Markdown 文件
 参考资料:
 - [如何在前端vue3中处理 `markdown` 并使用样式和代码高亮](https://blog.csdn.net/qq_74177889/article/details/139021973)
 - [markdown-it 官方文档](https://markdown-it.docschina.org)
 
-### 安装 markdown-it 依赖
+## 安装 markdown-it 依赖
 ```bash
  npm install markdown-it --save
 ```
@@ -31,7 +27,7 @@ text.value = markdown.render("# ***Hello World!***");
 ```bash
 npm install --save-dev @types/markdown-it
 ```
-### 导入处理本地文本文件
+## 导入处理本地文本文件
 [使用Vue3实现本地文件读取与处理的高效方法](https://www.oryoy.com/news/shi-yong-vue3-shi-xian-ben-di-wen-jian-du-qu-yu-chu-li-de-gao-xiao-fang-fa.html)
 
 安装 axios:

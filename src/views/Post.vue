@@ -9,7 +9,7 @@ import hljs from 'highlight.js/lib/common';
 // Markdown 样式
 import 'github-markdown-css/github-markdown-light.css';
 // 代码块样式
-import 'highlight.js/styles/xcode.css' 
+import 'highlight.js/styles/intellij-light.css' 
 
 import axios from 'axios';
 
@@ -55,7 +55,7 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
 
 <style scoped>
 .post-text {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .markdown-body {

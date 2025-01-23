@@ -1,12 +1,7 @@
----
-title: Hexo 主题项目简介
----
-
-
-## Hexo 主题开发
+# Hexo 主题开发
 本主题参照[此博客](https://www.cnblogs.com/yyhh/p/11058985.html)开发.
 
-### 项目文件结构
+## 项目文件结构
 ```js
 // themes/wiki/
 ├── _config.yml
@@ -28,7 +23,7 @@ title: Hexo 主题项目简介
         └── jquery.pjax.js          // jquery.pjax
 ```
 
-### 注意事项
+## 注意事项
 - 若使用的`Hexo`版本高于`7.0`, 请运行以下命令, 卸载自带的`highlight`插件:
     ```bash
     # macOS 系统若报错, 请使用 sudo 命令

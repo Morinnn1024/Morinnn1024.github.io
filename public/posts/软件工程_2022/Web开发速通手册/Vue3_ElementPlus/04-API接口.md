@@ -1,16 +1,13 @@
----
-title: 04 - API 接口
----
-## 04 - API 接口
+# 04 - API 接口
 *在前后端分离的小组项目中, 一般需要由后端同学实现后端业务功能, 再由前端同学根据后端提供的接口编写前端 axios.api, 实现前后端的连接。*
 
 *本项目使用的后端基于 SpringBoot 编写。*
 
 以用户登录注册为例, 本节将介绍如何编写和调用 api。
 
-### 一. 编写 axios.api
+## 一. 编写 axios.api
 *如果你的队友没有编写后端接口文档, 那么你需要根据后端代码来编写前端接口。*
-#### 1. 检查后端 Controller 代码
+### 1. 检查后端 Controller 代码
 打开项目后端, 找到 `./src/main/java`目录, 展开其中内容, 打开 `controller` 目录, 找到 `UserController.java`文件, 内容大致如下:
 ```java
 // UserController.java
@@ -58,7 +55,7 @@ public class UserController {
   }
   ```
 
-#### 2. 根据后端 Controller 编写前端 api
+### 2. 根据后端 Controller 编写前端 api
 具体方法如下: 
 1. 终端运行以下命令, 安装 Axios:
    ```bash
@@ -228,10 +225,10 @@ public class UserController {
 - 若报错 `POST(GET) 400` 或 `POST(GET) 500`, 请检查接口方法编写, 以及查看后端日志有无错误输出。
 - 若报错 `POST(GET) 404`, 请检查接口路径是否错误。
 
-### 二. 调用 api
+## 二. 调用 api
 编写了 api 接口后, 我们完善之前编写的登录方法, 尝试调用登录接口。
 
-#### 1. 引入 api
+### 1. 引入 api
 - 在 `Login.vue` 中, 引入 api:
 ```js
 // Login.vue
@@ -239,7 +236,7 @@ public class UserController {
 import { userLogin } from "../../api/user.ts"
 ```
 
-#### 2. 在函数方法中调用
+### 2. 在函数方法中调用
 - 对登录按钮事件 `clickButtonLogin()` 编写以下代码:
 ```js
 // 登录按钮触发
@@ -271,7 +268,7 @@ function clickButtonLogin() {
 }
 ```
 
-#### 3. 总结
+### 3. 总结
 由此, 我们可以总结调用 api 的方法:
 ```js
 functionName(params).then(res => {
@@ -292,7 +289,7 @@ functionName(params).then(res => {
 })
 ```
 
-### Tips: 关于登录
+## Tips: 关于登录
 登录后一般需要临时存储 `token` 和登录信息 (具体应依照后端的实际情况来实现)。
 为此, 我们修改登录成功的代码, 添加 `token` 相关的逻辑:
 ```js
@@ -341,7 +338,7 @@ function clickButtonLogin() {
 }
 ```
 
-### Tips: 注意事项
+## Tips: 注意事项
 **在团队协作中, 请时刻注意变量和方法的命名规范、代码格式的规范, 以及代码注释的编写。** *必要时可以拷打 ChatGPT, 防止队友拷打你。*
 
 尤其是对于初学者而言, 命名不规范可能导致一系列问题。大家在小组作业中一定会深有体会。

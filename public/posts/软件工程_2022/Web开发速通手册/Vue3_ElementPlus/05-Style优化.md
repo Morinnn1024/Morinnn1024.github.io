@@ -1,8 +1,4 @@
----
-title: 05 - Style 优化
----
-
-## 05 - Style 优化
+# 05 - Style 优化
 *更多有关页面布局的内容, 请自行学习 HTML 与 CSS 相关知识。*
 
 打开我们先前编写的登录页面, 可以看到类似下图的画面:
@@ -13,7 +9,7 @@ title: 05 - Style 优化
 
 *了解过 CSS 的同学会知道, CSS 有内联样式、内部样式表和外部样式表的形式。此处我们简要介绍内联样式。*
 
-### 修改 template 模板
+## 修改 template 模板
 打开 `Login.vue` 文件, 修改 `<template>` 中的内容, 添加 `style` 样式:
 ```html
 <!--Login.vue-->
@@ -98,7 +94,7 @@ title: 05 - Style 优化
 ![登录页-优化样式](./source/05-03.png)
 基本符合我们的预期需求。
 
-### Tips: Element Plus 组件样式
+## Tips: Element Plus 组件样式
 在 [Element Plus 官方组件文档](https://element-plus.org/zh-CN/component/overview.html) 中, 我们可以了解到 Element Plus 组件的特殊样式如何设置。
 有时候, `style` 中的某些样式与这些组件样式并不兼容, 修改后可能导致一些不符合预期的效果。
 
