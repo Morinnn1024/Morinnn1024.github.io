@@ -1,31 +1,41 @@
 <!-- Post.vue: 文档展示 -->
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
 import Footer from '@/components/Footer.vue';
-import MarkdownIt from 'markdown-it';
-import hljs from 'highlight.js/lib/core';
-import 'highlight.js/styles/atom-one-dark.css' //样式
+import { ref, onMounted } from 'vue';
+// Markdown 渲染
+import { Marked } from "marked"; 
+import { markedHighlight } from "marked-highlight"
+import hljs from 'highlight.js/lib/common';
+// Markdown 样式
+import 'github-markdown-css/github-markdown-light.css';
+// 代码块样式
+import 'highlight.js/styles/xcode.css' 
 
 import axios from 'axios';
 
 const file = ref('');
 const postConcentMd = ref('');
-const markdown = new MarkdownIt({
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(str, { language: lang }).value;
-      } catch (__) {}
-    }
-    return ''; // 使用默认的转义
-  }
+
+// 配置 highlight.js
+hljs.configure({
+  // 启用所有语言
+  languages: hljs.listLanguages()
 });
 
-
+// marked 配置
+const marked = new Marked(
+  markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+    const language = hljs.getLanguage(lang) ? lang : 'shell'
+    return hljs.highlight(code, { language }).value
+  }
+  })
+)
 
 axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md').then((res) => {  
   file.value = res.data;
-  postConcentMd.value = markdown.render(file.value);
+  postConcentMd.value = String(marked.parse(file.value));
   console.log(postConcentMd.value);
 }).catch((error) => {  
   console.error('Error reading file:', error);  
