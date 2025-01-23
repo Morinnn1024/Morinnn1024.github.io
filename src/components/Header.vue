@@ -12,7 +12,7 @@ import { Search } from '@element-plus/icons-vue'
     <el-link href="https://github.com/Morinnn1024">GitHub</el-link>
     <el-link href="https://morinnn.lofter.com">LOFTER</el-link>
     <el-link href="https://x.com/DYH3687941">X</el-link>
-    <img src="../../public/profile.jpg" width="40px" height="40px" style="border-radius: 50%; margin-right: 20px;"/>
+    <img src="../../profile.jpg" width="40px" height="40px" style="border-radius: 50%; margin-right: 20px;"/>
   </div>
 </template>
 

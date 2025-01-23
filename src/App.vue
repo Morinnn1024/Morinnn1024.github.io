@@ -46,6 +46,7 @@ import Sidebar from './components/Sidebar.vue'
 .el-main {
   padding: 0px;
   height: 100%;
+  min-width: 670px;
 }
 .el-aside {
   padding: 0px;

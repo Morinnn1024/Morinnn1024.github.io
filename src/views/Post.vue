@@ -3,27 +3,31 @@
 import { ref, onMounted } from 'vue';
 import Footer from '@/components/Footer.vue';
 import MarkdownIt from 'markdown-it';
-import axios from 'axios';  
+import 'github-markdown-css';
+import {common, createStarryNight} from '@wooorm/starry-night'
+import {toHtml} from 'hast-util-to-html'
+import axios from 'axios';
+import type { ElementContent } from 'hast';
 
+const file = ref('');
+const postConcentMd = ref('');
 const markdown = new MarkdownIt();
-const postContent = ref('');
 
-axios.get('./posts/软件工程_2022/00-写在前面.md').then((res) => {  
-  console.log('Data:', res.data);  
-  postContent.value = markdown.render(res.data);
+axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md').then((res) => {  
+  file.value = res.data;
+  postConcentMd.value = markdown.render(file.value);
+  console.log(postConcentMd)
 }).catch((error) => {  
   console.error('Error reading file:', error);  
-});  
-
+}); 
 </script>
 
 <template>
-  <el-scrollbar min-width="670">
+  <el-scrollbar class="custom-scrollbar">
     <div class="post-text">
-      <p v-html="postContent"></p>
-      <p v-for="item in 20" :key="item" class="scrollbar-demo-item">{{ item }}</p>
+      <div v-html="postConcentMd" class="markdown-body"></div>
     </div>
-    <p v-for="item in 20" :key="item" class="scrollbar-demo-item">{{ item }}</p>
+
     <!-- 页脚 -->
     <el-footer><Footer /></el-footer>
   </el-scrollbar>
@@ -33,17 +37,29 @@ axios.get('./posts/软件工程_2022/00-写在前面.md').then((res) => {
 .post-text {
   padding: 20px;
 }
-.scrollbar-demo-item {
-  width: 100%;
-  min-width: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  margin: 10px;
-  text-align: center;
-  border-radius: 4px;
-  background: var(--el-color-primary-light-9);
-  color: var(--el-color-primary);
+
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+.scrollbar-container {
+  width: 100%; /* 父容器宽度自适应屏幕 */
+  min-width: 670px;
+  height: 300px; /* 根据需要设置高度 */
+}
+
+.el-scrollbar {
+  width: 100%; /* el-scrollbar 宽度自适应父容器 */
+}
+
+/* 当屏幕宽度小于等于 950px 时 */
+@media (max-width: 950px) {
+  .custom-scrollbar {
+    min-width: 670px; /* 固定宽度为 670px */
+  }
 }
 </style>

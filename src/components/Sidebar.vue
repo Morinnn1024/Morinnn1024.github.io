@@ -41,7 +41,7 @@ const handleNodeClick = (node: TreeNode) => {
   <el-scrollbar>
     <div class="sidebar-header">
       <div class="header-icon">
-        <img src="../../public/profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
+        <img src="../../profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
       </div>
       <div class="header-text">
         <div><el-text size="large">森瑾晨</el-text></div>
@@ -87,7 +87,7 @@ const handleNodeClick = (node: TreeNode) => {
 .background {
   height: 100%;
   background-color: #f0f0f0;
-  background-image: url('../../public/bg-sidebar-winter.jpg'); 
+  background-image: url('../../bg-sidebar-winter.jpg'); 
   background-size: cover;
   background-position: center;
 }
