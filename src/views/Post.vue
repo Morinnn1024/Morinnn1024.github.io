@@ -5,7 +5,12 @@ import Footer from '@/components/Footer.vue';
 </script>
 
 <template>
-  <el-scrollbar>
+  <el-scrollbar min-width="670">
+    <div class="post-text">
+      <h1>标题</h1>
+      <p>内容</p>
+      <p v-for="item in 20" :key="item" class="scrollbar-demo-item">{{ item }}</p>
+    </div>
     <p v-for="item in 20" :key="item" class="scrollbar-demo-item">{{ item }}</p>
     <!-- 页脚 -->
     <el-footer><Footer /></el-footer>
@@ -13,7 +18,13 @@ import Footer from '@/components/Footer.vue';
 </template>
 
 <style scoped>
+.post-text {
+  width: 100%;
+  padding: 20px;
+}
 .scrollbar-demo-item {
+  width: 100%;
+  min-width: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
