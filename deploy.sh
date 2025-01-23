@@ -1,5 +1,5 @@
 # 构建 posts 目录树
-node "./src/views/posts/generateTree.cjs"
+node "./public/posts/generateTree.cjs"
 # 构建项目
 npm run build
 # 复制dist文件夹的`index.html`文件，将复制后的文件重命名为`404.html`

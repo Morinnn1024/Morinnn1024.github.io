@@ -3,11 +3,13 @@
 // 构建目录树
 // 运行 ./posts/generateTree.js 生成 treeData.json
 // 读取 treeData.json 内容
-import treeData from '../views/posts/treeData.json';
+import router from '@/router';
+import treeData from '../../public/posts/treeData.json';
 import { Document } from '@element-plus/icons-vue';
 
 interface TreeNode {
   id: number,
+  type: string,
   label: string,
   path: string,
   children?: TreeNode[]
@@ -18,13 +20,19 @@ const fileIndex = fileTree[0].children;
 
 const defaultProps = {
   id: 'id',
+  type: 'type',
   path: 'path',
   children: 'children',
   label: 'label',
 }
 
 const handleNodeClick = (node: TreeNode) => {
-  console.log(node)
+  if (node.type === 'file') {
+    router.push({ 
+      path: `/post`,
+      query: { path: node.path }
+    });
+  }
 }
 </script>
 
@@ -33,7 +41,7 @@ const handleNodeClick = (node: TreeNode) => {
   <el-scrollbar>
     <div class="sidebar-header">
       <div class="header-icon">
-        <img src="../assets/profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
+        <img src="../../public/profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
       </div>
       <div class="header-text">
         <div><el-text size="large">森瑾晨</el-text></div>
@@ -79,7 +87,7 @@ const handleNodeClick = (node: TreeNode) => {
 .background {
   height: 100%;
   background-color: #f0f0f0;
-  background-image: url('../assets/bg-sidebar-winter.jpg'); 
+  background-image: url('../../public/bg-sidebar-winter.jpg'); 
   background-size: cover;
   background-position: center;
 }
