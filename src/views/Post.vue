@@ -3,20 +3,30 @@
 import { ref, onMounted } from 'vue';
 import Footer from '@/components/Footer.vue';
 import MarkdownIt from 'markdown-it';
-import 'github-markdown-css';
-import {common, createStarryNight} from '@wooorm/starry-night'
-import {toHtml} from 'hast-util-to-html'
+import hljs from 'highlight.js/lib/core';
+import 'highlight.js/styles/atom-one-dark.css' //样式
+
 import axios from 'axios';
-import type { ElementContent } from 'hast';
 
 const file = ref('');
 const postConcentMd = ref('');
-const markdown = new MarkdownIt();
+const markdown = new MarkdownIt({
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (__) {}
+    }
+    return ''; // 使用默认的转义
+  }
+});
+
+
 
 axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md').then((res) => {  
   file.value = res.data;
   postConcentMd.value = markdown.render(file.value);
-  console.log(postConcentMd)
+  console.log(postConcentMd.value);
 }).catch((error) => {  
   console.error('Error reading file:', error);  
 }); 

@@ -9,7 +9,14 @@
     },
   ],
   "compilerOptions": {
-    "types": ["node"]
+    "types": [
+      "node",
+      "highlight.js",
+    ],
+    "typeRoots": ["./node_modules/@types"],
   },
-  "types": ["node"]
+  "types": [
+    "node",
+    "highlight.js",
+  ]
 }
