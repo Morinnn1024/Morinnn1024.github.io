@@ -16,7 +16,7 @@ import Sidebar from './components/Sidebar.vue'
             <Header />
           </el-header>
           <!-- 内容 -->
-          <el-main><RouterView /></el-main>
+          <el-main><RouterView :key="$route.fullPath"/></el-main>
         </el-container>
       </el-container>
     </el-container>

@@ -2,6 +2,9 @@
 <script setup lang="ts">
 import Footer from '@/components/Footer.vue';
 import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import axios from 'axios';
+
 // Markdown 渲染
 import { Marked } from "marked"; 
 import { markedHighlight } from "marked-highlight"
@@ -11,7 +14,6 @@ import 'github-markdown-css/github-markdown-light.css';
 // 代码块样式
 import 'highlight.js/styles/intellij-light.css' 
 
-import axios from 'axios';
 
 const file = ref('');
 const postConcentMd = ref('');
@@ -33,8 +35,16 @@ const marked = new Marked(
   })
 )
 
-axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md').then((res) => {  
+// 获取路由参数
+const route = useRoute();
+const queryParams = route.query;
+console.log(queryParams);
+
+axios.get(`./posts/${queryParams.path}`).then((res) => {  
   file.value = res.data;
+  if (!file.value) {
+    file.value = '## 施工中 ヽ(･ω･´ﾒ)';
+  }
   postConcentMd.value = String(marked.parse(file.value));
   console.log(postConcentMd.value);
 }).catch((error) => {  
@@ -44,13 +54,14 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
 
 <template>
   <div class="main">
-      <el-scrollbar class="custom-scrollbar">
+    <el-scrollbar class="custom-scrollbar">
     <div class="post-text">
-      <div v-html="postConcentMd" class="markdown-body"></div>
+      <div class="markdown-body">
+        <div v-html="postConcentMd"></div>
+        <!-- 页脚 -->
+        <el-footer><Footer /></el-footer>
+      </div>
     </div>
-
-    <!-- 页脚 -->
-    <el-footer><Footer /></el-footer>
   </el-scrollbar>
   </div>
 
@@ -78,19 +89,24 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
   opacity: 0.7;
 }
 
+:deep(.el-scrollbar__view) {
+  min-height: 100% !important;
+}
+
 .post-text {
   padding: 0 20px;
+  min-height: 600px;
 }
 
 .markdown-body {
   box-sizing: border-box;
   min-width: 200px;
   max-width: 980px;
+  min-height: 600px;
+
   margin: 0 auto;
   padding: 45px;
   padding-bottom: 75px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 
   backdrop-filter: blur(4px);
   background-color: rgba(255,255,255, 0.6);
@@ -104,6 +120,7 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
 
 .el-scrollbar {
   width: 100%; /* el-scrollbar 宽度自适应父容器 */
+  height: 100%; /* el-scrollbar 高度自适应父容器 */
 }
 
 /* 当屏幕宽度小于等于 950px 时 */
