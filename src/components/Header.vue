@@ -13,7 +13,11 @@ import router from '@/router'
     <el-link href="https://github.com/Morinnn1024">GitHub</el-link>
     <el-link href="https://morinnn.lofter.com">LOFTER</el-link>
     <el-link href="https://x.com/DYH3687941">X</el-link>
-    <img src="../../public/profile.jpg" width="40px" height="40px" style="border-radius: 50%; margin-right: 20px;"/>
+    <img src="../../public/profile.jpg" 
+      title="个人主页"
+      @click="router.push('/me')"
+      width="40px" height="40px" 
+      style="border-radius: 50%; margin-right: 20px;"/>
   </div>
 </template>
 

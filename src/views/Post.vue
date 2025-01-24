@@ -1,7 +1,7 @@
 <!-- Post.vue: 文档展示 -->
 <script setup lang="ts">
 import Footer from '@/components/Footer.vue';
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
 
@@ -30,9 +30,9 @@ const marked = new Marked(
   markedHighlight({
     langPrefix: 'hljs language-',
     highlight(code, lang) {
-    const language = hljs.getLanguage(lang) ? lang : 'shell'
-    return hljs.highlight(code, { language }).value
-  }
+      const language = hljs.getLanguage(lang) ? lang : 'shell'
+      return hljs.highlight(code, { language }).value
+    }
   })
 )
 
@@ -75,14 +75,12 @@ axios.get(`./posts/${queryParams.path}`).then((res) => {
 
 .post-text {
   padding: 0 20px;
-  min-height: 600px;
 }
 
 .markdown-body {
   box-sizing: border-box;
   min-width: 200px;
   max-width: 980px;
-  min-height: 600px;
 
   margin: 0 auto;
   padding: 45px;

@@ -44,7 +44,7 @@ const handleNodeClick = (node: TreeNode) => {
   <el-scrollbar>
     <div class="scrollbar">
       <!-- <div style="height: 40px;"></div> -->
-      <div class="sidebar-header">
+      <div class="sidebar-header" @click="router.push('/me')">
         <div class="header-icon">
           <img src="../../public/profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
         </div>
