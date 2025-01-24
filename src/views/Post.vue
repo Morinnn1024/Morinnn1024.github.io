@@ -4,6 +4,7 @@ import Footer from '@/components/Footer.vue';
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
+import treeData from '../../public/posts/treeData.json';
 
 // Markdown 渲染
 import { Marked } from "marked"; 

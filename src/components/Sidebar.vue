@@ -30,7 +30,10 @@ const handleNodeClick = (node: TreeNode) => {
   if (node.type === 'file') {
     router.push({ 
       path: `/post`,
-      query: { path: node.path }
+      query: { 
+        id: node.id,
+        path: node.path,
+      }
     });
   }
 }

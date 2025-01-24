@@ -10,7 +10,9 @@ function generateTree(dirPath, rootPathLength) {
     id: idCounter++,
     label: path.basename(dirPath),
     path: relativePath,
-    type: stats.isDirectory() ? 'directory' : 'file'
+    type: stats.isDirectory() ? 'directory' : 'file',
+    birthAt: stats.birthtime,
+    modifiedAt: stats.mtime,
   };
 
   if (stats.isDirectory()) {
