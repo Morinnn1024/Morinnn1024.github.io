@@ -43,7 +43,8 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
 </script>
 
 <template>
-  <el-scrollbar class="custom-scrollbar">
+  <div class="main">
+      <el-scrollbar class="custom-scrollbar">
     <div class="post-text">
       <div v-html="postConcentMd" class="markdown-body"></div>
     </div>
@@ -51,9 +52,32 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
     <!-- 页脚 -->
     <el-footer><Footer /></el-footer>
   </el-scrollbar>
+  </div>
+
 </template>
 
 <style scoped>
+.main {
+  height: 100%;
+  position: relative;
+}
+/* 设置背景图片透明度 */
+.main::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../../bg-main-winter.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
 .post-text {
   padding: 0 20px;
 }
@@ -64,6 +88,12 @@ axios.get('./posts/软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-�
   max-width: 980px;
   margin: 0 auto;
   padding: 45px;
+  padding-bottom: 75px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  backdrop-filter: blur(4px);
+  background-color: rgba(255,255,255, 0.6);
 }
 
 .scrollbar-container {

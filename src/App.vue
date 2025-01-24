@@ -9,7 +9,7 @@ import Sidebar from './components/Sidebar.vue'
     <el-container>
       <el-container>
         <!-- 侧边栏 -->
-        <el-aside><Sidebar /></el-aside>
+        <el-aside width="320px"><Sidebar /></el-aside>
         <el-container>
           <!-- 页眉 -->
           <el-header>

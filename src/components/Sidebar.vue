@@ -39,44 +39,47 @@ const handleNodeClick = (node: TreeNode) => {
 <template>
   <div class="background">
   <el-scrollbar>
-    <div class="sidebar-header">
-      <div class="header-icon">
-        <img src="../../profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
-      </div>
-      <div class="header-text">
-        <div><el-text size="large">森瑾晨</el-text></div>
-        <div>
-          <el-text style="color: #999">morinnn1024@qq.com</el-text>
+    <div class="scrollbar">
+      <!-- <div style="height: 40px;"></div> -->
+      <div class="sidebar-header">
+        <div class="header-icon">
+          <img src="../../profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
         </div>
-        <div style="margin-top: 5px;">
-          <el-text style="color: #999">逆水行舟。</el-text>
+        <div class="header-text">
+          <div><el-text size="large">森瑾晨</el-text></div>
+          <div>
+            <el-text style="color: #999">morinnn1024@qq.com</el-text>
+          </div>
+          <div style="margin-top: 5px;">
+            <el-text style="color: #999">逆水行舟。</el-text>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="sidebar-list">
-      <el-link>首页</el-link>
-      <el-link>食用指南</el-link>
-    </div>
+      <div class="sidebar-list">
+        <el-link>首页</el-link>
+        <el-link>食用指南</el-link>
+      </div>
 
-    <div class="sidebar-list">
-      <el-tree
-        style="width: 260px;"
-        :data="fileIndex"
-        :props="defaultProps"
-        :indent="8"
-        @node-click="handleNodeClick"
-      >
-        <template #default="{ node }">
-          <el-icon v-if="node.label.substr(-3) === '.md'" class="node-icon"><Document /></el-icon>
-          <span>
-            {{ node.label.split('.')[0] }}
-          </span>
-        </template>
-      </el-tree>
-    </div>
-    <div class="sidebar-list" style="height: 60px">
-      <div>
-        <el-text style="margin: 3px; margin-left: 14px;">广告位招租~ (∠・ω< )⌒☆</el-text>
+      <div class="sidebar-list">
+        <el-tree
+          style="width: 240px;"
+          :data="fileIndex"
+          :props="defaultProps"
+          :indent="8"
+          @node-click="handleNodeClick"
+        >
+          <template #default="{ node }">
+            <el-icon v-if="node.label.substr(-3) === '.md'" class="node-icon"><Document /></el-icon>
+            <span>
+              {{ node.label.split('.')[0] }}
+            </span>
+          </template>
+        </el-tree>
+      </div>
+      <div class="sidebar-list" style="height: 60px">
+        <div>
+          <el-text style="margin: 3px; margin-left: 14px;">广告位招租~ (∠・ω< )⌒☆</el-text>
+        </div>
       </div>
     </div>
   </el-scrollbar>
@@ -84,17 +87,36 @@ const handleNodeClick = (node: TreeNode) => {
 </template>
 
 <style scoped>
+.scrollbar {
+  height: 100%;
+  padding: 10px;
+}
+
 .background {
   height: 100%;
-  background-color: #f0f0f0;
+  position: relative;
+  border-right: 1px solid #ccc; 
+}
+
+.background::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url('../../bg-sidebar-winter.jpg'); 
   background-size: cover;
   background-position: center;
+  opacity: 0.7;
 }
 
 .sidebar-header {
   padding: 10px;
-  margin: 10px;
+  margin: 13px;
   margin-top: 20px;
   display: flex;
 
@@ -104,6 +126,8 @@ const handleNodeClick = (node: TreeNode) => {
   
   box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
   border: 1px rgba(255,255,255,0.4) solid;
+  border-bottom: 0.5px rgba(40,40,40,0.35) solid;
+  border-right: 0.5px rgba(40,40,40,0.35) solid;
 }
 
 .header-text {
@@ -115,7 +139,7 @@ const handleNodeClick = (node: TreeNode) => {
 
 .sidebar-list{
   padding: 10px;
-  margin: 10px;
+  margin: 13px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -128,6 +152,8 @@ const handleNodeClick = (node: TreeNode) => {
   
   box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
   border: 1px rgba(255,255,255,0.4) solid;
+  border-bottom: 0.5px rgba(40,40,40,0.35) solid;
+  border-right: 0.5px rgba(40,40,40,0.35) solid;
 }
 
 .el-link {
