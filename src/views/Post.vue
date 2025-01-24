@@ -4,7 +4,6 @@ import Footer from '@/components/Footer.vue';
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
-import treeData from '../../public/posts/treeData.json';
 
 // Markdown 渲染
 import { Marked } from "marked"; 
@@ -87,7 +86,7 @@ axios.get(`./posts/${queryParams.path}`).then((res) => {
 
   margin: 0 auto;
   padding: 45px;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
 
   backdrop-filter: blur(4px);
   background-color: rgba(255,255,255, 0.6);

@@ -124,7 +124,7 @@ const handleNodeClick = (node: TreeNode) => {
   display: flex;
 
   backdrop-filter: blur(8px);
-  background-color: rgba(255,255,255, 0.6);
+  background-color: rgba(255,255,255, 0.5);
   border-radius: 15px;
   
   box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
@@ -150,7 +150,7 @@ const handleNodeClick = (node: TreeNode) => {
   justify-content: center;
 
   backdrop-filter: blur(8px);
-  background-color: rgba(255,255,255, 0.6);
+  background-color: rgba(255,255,255, 0.5);
   border-radius: 15px;
   
   box-shadow: rgba(0, 0, 0, 0.01) 2px 2px 2px;
