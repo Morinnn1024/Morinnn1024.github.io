@@ -85,7 +85,7 @@ function formatDateTime(dateTimeString: string) {
     <div class="line" style="font-size: small; color: #666;">
       Powered by 
       <img :src="vueLogo" height="13px" width="13px" style="margin-left: 5px;">Vue3 & 
-      <el-icon color="var(--el-color-primary)" style="margin-left: 5px;"><ElementPlus /></el-icon> ElementPlus
+      <el-icon color="var(--el-color-primary)" style="margin-left: 5px;"><ElementPlus /></el-icon> Element Plus
     </div>
     <div style="font-size: small; color: #666;">
       Copyright © 2025 Morinnn. All Rights Reserved.

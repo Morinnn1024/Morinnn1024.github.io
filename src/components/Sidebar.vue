@@ -59,7 +59,7 @@ const handleNodeClick = (node: TreeNode) => {
         </div>
       </div>
       <div class="sidebar-list">
-        <el-link>首页</el-link>
+        <el-link @click="router.push('/')">首页</el-link>
         <el-link>食用指南</el-link>
       </div>
 
@@ -123,7 +123,7 @@ const handleNodeClick = (node: TreeNode) => {
   margin-top: 20px;
   display: flex;
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
   background-color: rgba(255,255,255, 0.5);
   border-radius: 15px;
   
@@ -149,7 +149,7 @@ const handleNodeClick = (node: TreeNode) => {
   
   justify-content: center;
 
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
   background-color: rgba(255,255,255, 0.5);
   border-radius: 15px;
   
