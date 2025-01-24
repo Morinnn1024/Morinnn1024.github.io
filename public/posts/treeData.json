@@ -131,59 +131,53 @@
                   "label": "02 - 编写基础业务功能.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/02-编写基础业务功能.md",
                   "type": "file"
-                },
-                {
-                  "id": 21,
-                  "label": "服务端开发 - 学习总结.md",
-                  "path": "软件工程_2022/Web开发速通手册/SpringBoot/服务端开发-学习总结.md",
-                  "type": "file"
                 }
               ]
             },
             {
-              "id": 22,
+              "id": 21,
               "label": "Vue3_ElementPlus",
               "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus",
               "type": "directory",
               "children": [
                 {
-                  "id": 23,
+                  "id": 22,
                   "label": "00 - 环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/00-环境配置.md",
                   "type": "file"
                 },
                 {
-                  "id": 24,
+                  "id": 23,
                   "label": "01 - 项目结构.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/01-项目结构.md",
                   "type": "file"
                 },
                 {
-                  "id": 25,
+                  "id": 24,
                   "label": "02 - 页面构成.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md",
                   "type": "file"
                 },
                 {
-                  "id": 26,
+                  "id": 25,
                   "label": "03 - 变量与函数.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/03-变量与函数.md",
                   "type": "file"
                 },
                 {
-                  "id": 27,
+                  "id": 26,
                   "label": "04 - API接口.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/04-API接口.md",
                   "type": "file"
                 },
                 {
-                  "id": 28,
+                  "id": 27,
                   "label": "05 - Style优化.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/05-Style优化.md",
                   "type": "file"
                 },
                 {
-                  "id": 29,
+                  "id": 28,
                   "label": "06 - 父组件与子组件.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/06-父组件与子组件.md",
                   "type": "file"
