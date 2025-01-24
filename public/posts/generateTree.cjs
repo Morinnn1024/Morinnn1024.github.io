@@ -8,7 +8,7 @@ function generateTree(dirPath, rootPathLength) {
   const relativePath = dirPath.substring(rootPathLength);
   const info = {
     id: idCounter++,
-    label: path.basename(dirPath).replace(/-/g, ' - '),
+    label: path.basename(dirPath),
     path: relativePath,
     type: stats.isDirectory() ? 'directory' : 'file'
   };

@@ -67,6 +67,34 @@ import Sidebar from './components/Sidebar.vue'
   border-bottom: 1px solid #ccc; /* 添加下边框 */
 }
 
+.main {
+  height: 100%;
+  position: relative;
+}
+/* 设置背景图片透明度 */
+.main::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../../bg-main-winter.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+/* 当屏幕宽度小于等于 950px 时 */
+@media (max-width: 950px) {
+  .custom-scrollbar {
+    min-width: 670px; /* 固定宽度为 670px */
+  }
+}
+
 .light-mode {
   background-color: #fff;
 }

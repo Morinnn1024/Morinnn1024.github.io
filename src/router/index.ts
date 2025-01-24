@@ -1,4 +1,3 @@
-import Post from '@/views/Post.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -7,12 +6,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Post,
+      component: () => import('../views/HomePage.vue'),
     },
     {
       path: '/post',
       name: 'post',
       component: () => import('../views/Post.vue'),
+    },
+    {
+      path: '/me',
+      name: 'me',
+      component: () => import('../views/UserPage.vue'),
     },
     // {
     //   path: '/about',

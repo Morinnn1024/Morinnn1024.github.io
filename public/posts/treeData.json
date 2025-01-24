@@ -26,19 +26,19 @@
       "children": [
         {
           "id": 4,
-          "label": "00 - 环境配置.md",
+          "label": "00-环境配置.md",
           "path": "Vue3_GitHubPages/00-环境配置.md",
           "type": "file"
         },
         {
           "id": 5,
-          "label": "01 - 部署GithubPages.md",
+          "label": "01-部署GithubPages.md",
           "path": "Vue3_GitHubPages/01-部署GithubPages.md",
           "type": "file"
         },
         {
           "id": 6,
-          "label": "el - tree构建目录树.md",
+          "label": "el-tree构建目录树.md",
           "path": "Vue3_GitHubPages/el-tree构建目录树.md",
           "type": "file"
         },
@@ -58,7 +58,7 @@
       "children": [
         {
           "id": 9,
-          "label": "00 - 写在前面.md",
+          "label": "00-写在前面.md",
           "path": "软件工程_2022/00-写在前面.md",
           "type": "file"
         },
@@ -70,13 +70,13 @@
           "children": [
             {
               "id": 11,
-              "label": "00 - 环境配置.md",
+              "label": "00-环境配置.md",
               "path": "软件工程_2022/HarmonyOS速通手册/00-环境配置.md",
               "type": "file"
             },
             {
               "id": 12,
-              "label": "01 - 项目结构.md",
+              "label": "01-项目结构.md",
               "path": "软件工程_2022/HarmonyOS速通手册/01-项目结构.md",
               "type": "file"
             }
@@ -96,13 +96,13 @@
               "children": [
                 {
                   "id": 15,
-                  "label": "00 - 环境配置.md",
+                  "label": "00-环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/MySQL/00-环境配置.md",
                   "type": "file"
                 },
                 {
                   "id": 16,
-                  "label": "01 - 基础语句.md",
+                  "label": "01-基础语句.md",
                   "path": "软件工程_2022/Web开发速通手册/MySQL/01-基础语句.md",
                   "type": "file"
                 }
@@ -116,19 +116,19 @@
               "children": [
                 {
                   "id": 18,
-                  "label": "00 - 环境配置.md",
+                  "label": "00-环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/00-环境配置.md",
                   "type": "file"
                 },
                 {
                   "id": 19,
-                  "label": "01 - 项目结构.md",
+                  "label": "01-项目结构.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/01-项目结构.md",
                   "type": "file"
                 },
                 {
                   "id": 20,
-                  "label": "02 - 编写基础业务功能.md",
+                  "label": "02-编写基础业务功能.md",
                   "path": "软件工程_2022/Web开发速通手册/SpringBoot/02-编写基础业务功能.md",
                   "type": "file"
                 }
@@ -142,43 +142,43 @@
               "children": [
                 {
                   "id": 22,
-                  "label": "00 - 环境配置.md",
+                  "label": "00-环境配置.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/00-环境配置.md",
                   "type": "file"
                 },
                 {
                   "id": 23,
-                  "label": "01 - 项目结构.md",
+                  "label": "01-项目结构.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/01-项目结构.md",
                   "type": "file"
                 },
                 {
                   "id": 24,
-                  "label": "02 - 页面构成.md",
+                  "label": "02-页面构成.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/02-页面构成.md",
                   "type": "file"
                 },
                 {
                   "id": 25,
-                  "label": "03 - 变量与函数.md",
+                  "label": "03-变量与函数.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/03-变量与函数.md",
                   "type": "file"
                 },
                 {
                   "id": 26,
-                  "label": "04 - API接口.md",
+                  "label": "04-API接口.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/04-API接口.md",
                   "type": "file"
                 },
                 {
                   "id": 27,
-                  "label": "05 - Style优化.md",
+                  "label": "05-Style优化.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/05-Style优化.md",
                   "type": "file"
                 },
                 {
                   "id": 28,
-                  "label": "06 - 父组件与子组件.md",
+                  "label": "06-父组件与子组件.md",
                   "path": "软件工程_2022/Web开发速通手册/Vue3_ElementPlus/06-父组件与子组件.md",
                   "type": "file"
                 }

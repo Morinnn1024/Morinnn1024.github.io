@@ -12,7 +12,8 @@ import hljs from 'highlight.js/lib/common';
 // Markdown 样式
 import 'github-markdown-css/github-markdown-light.css';
 // 代码块样式
-import 'highlight.js/styles/intellij-light.css' 
+// import 'highlight.js/styles/intellij-light.css' 
+import 'highlight.js/styles/xcode.css' 
 
 
 const file = ref('');
@@ -59,7 +60,7 @@ axios.get(`./posts/${queryParams.path}`).then((res) => {
       <div class="markdown-body">
         <div v-html="postConcentMd"></div>
         <!-- 页脚 -->
-        <el-footer><Footer /></el-footer>
+        <Footer style="margin-top: 40px" />
       </div>
     </div>
   </el-scrollbar>
@@ -68,27 +69,6 @@ axios.get(`./posts/${queryParams.path}`).then((res) => {
 </template>
 
 <style scoped>
-.main {
-  height: 100%;
-  position: relative;
-}
-/* 设置背景图片透明度 */
-.main::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('../../bg-main-winter.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-}
-
 :deep(.el-scrollbar__view) {
   min-height: 100% !important;
 }
@@ -121,12 +101,5 @@ axios.get(`./posts/${queryParams.path}`).then((res) => {
 .el-scrollbar {
   width: 100%; /* el-scrollbar 宽度自适应父容器 */
   height: 100%; /* el-scrollbar 高度自适应父容器 */
-}
-
-/* 当屏幕宽度小于等于 950px 时 */
-@media (max-width: 950px) {
-  .custom-scrollbar {
-    min-width: 670px; /* 固定宽度为 670px */
-  }
 }
 </style>
