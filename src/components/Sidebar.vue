@@ -43,7 +43,7 @@ const handleNodeClick = (node: TreeNode) => {
       <!-- <div style="height: 40px;"></div> -->
       <div class="sidebar-header">
         <div class="header-icon">
-          <img src="../../profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
+          <img src="../../public/profile.jpg" width="80px" height="80px" style="border-radius: 50%;"/>
         </div>
         <div class="header-text">
           <div><el-text size="large">森瑾晨</el-text></div>
