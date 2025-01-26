@@ -172,33 +172,36 @@ public class UserController {
       }
       ```
    - 用户登录
-  后端 Controller 接口:
-      ```java
-      // UserController.java
-      @PostMapping("/login")
-      public ResultVO<String> login(@RequestParam("phone") String username, @RequestParam("password") String password) {
-          return ResultVO.buildSuccess(userService.login(phone, password));
-      }
-      ```
-      - api 路径: `/login`
-      - 请求体: 无
-      - 请求参数: `String phone`, `String password`
-  
+       后端 Controller 接口:
+     ```java
+     // UserController.java
+     @PostMapping("/login")
+     public ResultVO<String> login(@RequestParam("phone") String username, @RequestParam("password") String password) {
+        return ResultVO.buildSuccess(userService.login(phone, password));
+     }
+     ```
+
+        - api 路径: `/login`
+        - 请求体: 无
+        - 请求参数: `String phone`, `String password`
+
      对应的前端接口:
-      ```ts
-      // user.ts
-      export const userLogin = (phone: string, password: string) => {
-        return axios.post(
-          `${USER_MODULE}/login`, // 请求路径
-          null, // 请求体, null 表示不需要请求体
-          { params: { phone, password } } // 请求参数
-        ).then(res => {
-          return res
-        })
-      }
-      ```
+
+     ```ts
+     // user.ts
+     export const userLogin = (phone: string, password: string) => {
+      return axios.post(
+        `${USER_MODULE}/login`, // 请求路径
+        null, // 请求体, null 表示不需要请求体
+        { params: { phone, password } } // 请求参数
+      ).then(res => {
+        return res
+      })
+     }
+     ```
+     
    - 获取用户信息
-  后端 Controller 接口:
+    后端 Controller 接口:
       ```java
       // UserController.java
       @GetMapping()
@@ -219,7 +222,7 @@ public class UserController {
         })
       }
       ```
-8. Tips:
+1. Tips:
 接口是前后端连接中最容易出现问题的部分。
 当你无法从后端正确传入或获取数据时, 请在浏览器中按 `F12` 查看控制台错误输出。
 - 若报错 `POST(GET) 400` 或 `POST(GET) 500`, 请检查接口方法编写, 以及查看后端日志有无错误输出。

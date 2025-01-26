@@ -18,19 +18,20 @@ body {
 }
 
 p {
-  line-height: 2 !important;
+  line-height: 2;
 }
 
 li {
-  line-height: 2 !important;
+  line-height: 2;
 }
 
 em {
-  line-height: 2 !important;
+  line-height: 2;
 }
 
 pre {
-  margin-top: 16px !important;
+  margin-top: 16px;
+  display: flex;
 }
 
 code {
@@ -124,6 +125,31 @@ em {
   background-position: center;
   -webkit-mask: linear-gradient(to bottom right, transparent, white);
   mask: linear-gradient(to bottom right, transparent, white);
+}
+
+.pre-numbering {
+  width: fit-content;
+  height: 100%;
+  margin: 0 !important;
+  padding: 13.6px;
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+  list-style-type: none;
+  font-family: 'Consolas', 'Monaco', 'Courier New', 'Courier', 'monospace';
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  flex-direction: column; /* 垂直排列子项 */
+  justify-content: center; /* 垂直居中 */
+}
+
+.line-number {
+  line-height: 19.7px !important;
+  margin: 0 !important;
+  padding-right: 10px !important;
+
+  color: rgb(153, 153, 153);
+  border-right: rgb(212, 212, 212) 1px solid;
 }
 
 /* 当屏幕宽度小于等于 950px 时 */
