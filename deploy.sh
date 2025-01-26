@@ -1,7 +1,7 @@
 # 构建 posts 目录树
 node "./public/posts/generateTree.cjs"
 # 构建项目
-npm run build
+npm run build-only
 # 复制dist文件夹的`index.html`文件，将复制后的文件重命名为`404.html`
 cp dist/index.html dist/404.html
 # 将项目提交到 main 分支
