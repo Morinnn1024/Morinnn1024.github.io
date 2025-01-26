@@ -4,6 +4,7 @@ import Footer from '@/components/Footer.vue';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
+import formatCodeBlock from '../utils/codeBlockFormatter';
 
 // Markdown 渲染
 import { Marked } from "marked"; 
@@ -36,49 +37,6 @@ const marked = new Marked(
   })
 )
 
-// 添加代码块行号
-function addLineNumbersToCodeBlock(htmlContent: string) {
-  // 使用 DOMParser 解析 HTML 内容
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(htmlContent, "text/html");
-
-  // 查找所有的 <pre><code> 块
-  const codeBlocks = doc.querySelectorAll("pre > code");
-
-  codeBlocks.forEach((codeBlock) => {
-    // 获取代码内容并按行分割
-    const codeLines = (codeBlock.textContent || '').split("\n");
-
-    // 创建 <ul> 元素
-    const ulElement = document.createElement("ul");
-    ulElement.className = "pre-numbering";
-    // 创建 <li> 元素
-    const liElement = document.createElement("li");
-    liElement.className = "line-number";
-    // <ul class="pre-numbering" style="">
-    //   <li style="color: rgb(153, 153, 153);">1</li>
-    //   <li style="color: rgb(153, 153, 153);">2</li>
-    //   <li style="color: rgb(153, 153, 153);">3</li>
-    // </ul>
-    codeLines.forEach((line, index) => {
-      if (index < codeLines.length - 1) {
-        const codeLine = liElement.cloneNode();
-        codeLine.textContent = (index + 1).toString();
-        ulElement.appendChild(codeLine);
-      }
-    });
-    // 在 <pre><code></code></pre> 之间插入 <ul> 元素
-    if (codeBlock.parentNode) {
-      codeBlock.parentNode.insertBefore(ulElement, codeBlock);
-    }
-  });
-
-  // 返回修改后的 HTML 内容
-  return doc.body.innerHTML;
-}
-
-// 
-
 // 获取路由参数
 const route = useRoute();
 const queryParams = route.query;
@@ -91,7 +49,7 @@ axios.get(`./posts/${queryParams.path}`).then((res) => {
   }
   postConcentMd.value = String(marked.parse(file.value));
   console.log(postConcentMd.value);
-  postConcentMd.value = addLineNumbersToCodeBlock(postConcentMd.value);
+  postConcentMd.value = formatCodeBlock(postConcentMd.value);
 }).catch((error) => {  
   console.error('Error reading file:', error);  
 }); 
