@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import Sidebar from './components/Sidebar.vue'
-import { ElMessage } from 'element-plus';
 
 document.addEventListener("DOMContentLoaded", function() {
   const container = document.body; // 或者其他父元素
