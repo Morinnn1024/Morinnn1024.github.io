@@ -13,6 +13,14 @@
 </html>
 
 <style>
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   overflow-y: hidden;
 }
@@ -35,10 +43,12 @@ pre {
 }
 
 code {
+  line-height: 23px !important;
   color: rgb(255, 89, 0);
   border: 1px rgba(0, 0, 0, 0.05) solid;
   background-color: white;
 }
+
 em {
   color: rgba(0, 0, 0, 0.5) !important; 
 }
@@ -60,14 +70,6 @@ em {
 .el-tree-node.is-current > .el-tree-node__content {
   color: var(--el-color-primary) !important; /* 设置选中条目的文字颜色 */
   /* font-weight: bold !important; 可选：增加文字粗细 */
-}
-
-#app {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .index {
@@ -132,7 +134,7 @@ em {
   height: 100%;
   margin: 0 !important;
   padding: 13.6px;
-  padding-left: 20px !important;
+  padding-left: 15px !important;
   padding-right: 0 !important;
   list-style-type: none;
   font-family: 'Consolas', 'Monaco', 'Courier New', 'Courier', 'monospace';
@@ -144,7 +146,7 @@ em {
 }
 
 .line-number {
-  line-height: 19.7px !important;
+  line-height: 23px !important;
   margin: 0 !important;
   padding-right: 10px !important;
 
