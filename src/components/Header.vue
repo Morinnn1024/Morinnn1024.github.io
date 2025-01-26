@@ -17,7 +17,7 @@ import router from '@/router'
       title="个人主页"
       @click="router.push('/me')"
       width="40px" height="40px" 
-      style="border-radius: 50%; margin-right: 20px;"/>
+      style="border-radius: 50%; margin-right: 20px; cursor: pointer;"/>
   </div>
 </template>
 

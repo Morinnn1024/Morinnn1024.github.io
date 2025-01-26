@@ -118,6 +118,8 @@ const handleNodeClick = (node: TreeNode) => {
 }
 
 .sidebar-header {
+  cursor: pointer;
+
   padding: 10px;
   margin: 13px;
   margin-top: 20px;

@@ -17,12 +17,11 @@ export default function formatCodeBlock(htmlContent: string) {
     ulElement.classList.add("code-lines");
 
     // 创建头部元素
-    const preElement = codeBlock.parentElement;
     const headerElement = document.createElement("div");
     headerElement.classList.add("code-header");
 
     // 获取代码语言类型
-    const lang = codeBlock.className.replace('language-', '');
+    const lang = codeBlock.className.replace('hljs language-', '');
     const langElement = document.createElement("span");
     langElement.classList.add("code-lang");
     langElement.textContent = lang;
@@ -35,8 +34,8 @@ export default function formatCodeBlock(htmlContent: string) {
     // 复制按钮点击事件
     copyButton.addEventListener("click", () => {
       const codeText = codeBlock.textContent || '';
+      console.log("Copied to clipboard: ", codeText);
       navigator.clipboard.writeText(codeText).then(() => {
-        console.log("Copied to clipboard: ", codeText);
         copyButton.textContent = "已复制";
         setTimeout(() => {
           copyButton.textContent = "复制";
@@ -66,6 +65,19 @@ export default function formatCodeBlock(htmlContent: string) {
     // 在 <pre><code></code></pre> 之间插入 <ul> 元素
     if (codeBlock.parentNode) {
       codeBlock.parentNode.insertBefore(ulElement, codeBlock);
+    }
+
+    // 新建 div 元素，用于包裹头部和代码块
+    const container = document.createElement("div");
+    container.classList.add("code-block");
+
+    // 将头部和代码块添加到 codeBlock
+    container.appendChild(headerElement);
+    container.appendChild(codeBlock.parentNode?.cloneNode(true) as Node);
+
+    // 使用 container 替换 codeBlock 的父节点
+    if (codeBlock.parentNode) {
+      codeBlock.parentNode.parentNode?.replaceChild(container, codeBlock.parentNode);
     }
   });
 

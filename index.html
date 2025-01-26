@@ -38,8 +38,12 @@ em {
 }
 
 pre {
-  margin-top: 16px;
+  margin: 0 !important;
+  padding-top: 0 !important;
   display: flex;
+  border-radius: 0 !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 code {
@@ -129,15 +133,60 @@ em {
   mask: linear-gradient(to bottom right, transparent, white);
 }
 
+.code-block {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.code-header {
+  height: 39px;
+  width: 100%;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d5e3ec92;
+  color: #999;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.code-lang{
+  margin-left: 20px;
+  font-family: 'monospace', 'Consolas', 'Monaco', 'Courier New', 'Courier';
+}
+
+.copy-button {
+  margin-right: 20px;
+  height: 30px;
+
+}
+
+.copy-button {
+  background-color: transparent; /* Element-Plus 主要按钮的背景色 */
+  color: #409EFF; /* 文字颜色 */
+  border: none; /* 无边框 */
+  cursor: pointer; /* 鼠标样式 */
+  outline: none; /* 去掉焦点边框 */
+}
+
+.copy-button:hover {
+  color: #66b1ff; /* 鼠标悬停时的文字颜色 */
+}
+
+.copy-button:active {
+  color: #3a8ee6; /* 鼠标按下时的文字颜色 */
+}
+
 .pre-numbering {
   width: fit-content;
   height: 100%;
   margin: 0 !important;
   padding: 13.6px;
-  padding-left: 15px !important;
+  padding-left: 5px !important;
   padding-right: 0 !important;
   list-style-type: none;
-  font-family: 'Consolas', 'Monaco', 'Courier New', 'Courier', 'monospace';
+  font-family: 'monospace', 'Consolas', 'Monaco', 'Courier New', 'Courier';
   font-size: 14px;
   color: #666;
   text-align: right;
