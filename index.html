@@ -5,8 +5,8 @@
     <link rel="icon" href="/favicon.ico?">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-_cqEephQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BvN2NJE4.css">
+    <script type="module" crossorigin src="/assets/index-DM1FeEta.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CT_q63-5.css">
   </head>
   <body>
     <div id="app"></div>
@@ -14,31 +14,46 @@
 </html>
 
 <style>
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   overflow-y: hidden;
 }
 
 p {
-  line-height: 2 !important;
+  line-height: 2;
 }
 
 li {
-  line-height: 2 !important;
+  line-height: 2;
 }
 
 em {
-  line-height: 2 !important;
+  line-height: 2;
 }
 
 pre {
-  margin-top: 16px !important;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  display: flex;
+  border-radius: 0 !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 code {
+  line-height: 23px !important;
   color: rgb(255, 89, 0);
   border: 1px rgba(0, 0, 0, 0.05) solid;
   background-color: white;
 }
+
 em {
   color: rgba(0, 0, 0, 0.5) !important; 
 }
@@ -60,14 +75,6 @@ em {
 .el-tree-node.is-current > .el-tree-node__content {
   color: var(--el-color-primary) !important; /* 设置选中条目的文字颜色 */
   /* font-weight: bold !important; 可选：增加文字粗细 */
-}
-
-#app {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .index {
@@ -125,6 +132,76 @@ em {
   background-position: center;
   -webkit-mask: linear-gradient(to bottom right, transparent, white);
   mask: linear-gradient(to bottom right, transparent, white);
+}
+
+.code-block {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.code-header {
+  height: 39px;
+  width: 100%;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d5e3ec92;
+  color: #999;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.code-lang{
+  margin-left: 20px;
+  font-family: 'monospace', 'Consolas', 'Monaco', 'Courier New', 'Courier';
+}
+
+.copy-button {
+  margin-right: 20px;
+  height: 30px;
+
+}
+
+.copy-button {
+  background-color: transparent; /* Element-Plus 主要按钮的背景色 */
+  color: #409EFF; /* 文字颜色 */
+  border: none; /* 无边框 */
+  cursor: pointer; /* 鼠标样式 */
+  outline: none; /* 去掉焦点边框 */
+}
+
+.copy-button:hover {
+  color: #66b1ff; /* 鼠标悬停时的文字颜色 */
+}
+
+.copy-button:active {
+  color: #3a8ee6; /* 鼠标按下时的文字颜色 */
+}
+
+.pre-numbering {
+  width: fit-content;
+  height: 100%;
+  margin: 0 !important;
+  padding: 13.6px;
+  padding-left: 5px !important;
+  padding-right: 0 !important;
+  list-style-type: none;
+  font-family: 'monospace', 'Consolas', 'Monaco', 'Courier New', 'Courier';
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  flex-direction: column; /* 垂直排列子项 */
+  justify-content: center; /* 垂直居中 */
+}
+
+.line-number {
+  line-height: 23px !important;
+  margin: 0 !important;
+  padding-right: 10px !important;
+
+  color: rgb(153, 153, 153);
+  border-right: rgb(212, 212, 212) 1px solid;
 }
 
 /* 当屏幕宽度小于等于 950px 时 */
